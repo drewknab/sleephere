@@ -1,0 +1,12 @@
+body {
+    background: #efefef;
+    color: #222222;
+    font-family: Arial;
+    font-size: 10vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.warning {
+    color: #ee3333;
+}
