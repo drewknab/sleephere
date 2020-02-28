@@ -7,6 +7,7 @@
     "Did you bring a tent?",
     "You gonna take down the cot?",
     "Aren't you going to put away the sleeping bag?",
+    "Working after 5 PM? Fake news.",
   ];
 
   const focusMessages = [
@@ -19,17 +20,23 @@
   ];
 
   const getMessages = (messageArray) => messageArray[Math.floor(Math.random() * messageArray.length)];
+  if (theDate.getDay() === 0 || theDate.getDay() === 6) {
+    $main.classList.add("warning");
+    $main.innerHTML = /*html*/`
+      <p><img src='/images/casterdrei.jpg'>It's the weekend, mute Slack.</p>
+    `;
+    return;
+  }
 
-  if (theDate.getHours() >= 17)
-  {
+  if (theDate.getHours() >= 17) {
     $main.classList.add("warning");
     $main.innerHTML = /*html*/`
       <p><img src='/images/casterdrei.jpg'>${getMessages(goHomeMessages)}</p>
     `;
+    return;
   }
-  else {
-    $main.innerHTML = /*html*/`
-      <p><img src='/images/lyindrei.jpg'>${getMessages(focusMessages)}</p>
-    `;
-  }
+
+  $main.innerHTML = /*html*/`
+    <p><img src='/images/lyindrei.png'>${getMessages(focusMessages)}</p>
+  `;
 })();
