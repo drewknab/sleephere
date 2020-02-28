@@ -24,12 +24,12 @@
   {
     $main.classList.add("warning");
     $main.innerHTML = /*html*/`
-      <p>${getMessages(goHomeMessages)}</p>
+      <p><img src='/images/casterdrei.jpg'>${getMessages(goHomeMessages)}</p>
     `;
   }
   else {
     $main.innerHTML = /*html*/`
-      <p><img src='/images/casterdrei.jpg'>${getMessages(focusMessages)}</p>
+      <p><img src='/images/lyindrei.jpg'>${getMessages(focusMessages)}</p>
     `;
   }
 })();
