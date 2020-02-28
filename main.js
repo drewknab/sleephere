@@ -15,7 +15,7 @@
     "slack <img src='/images/snowflake.png'>",
     "Slack === slacking",
     "too much dank, not enough codez",
-    "stfu - Jan 3rd, 2019 10:39:48 PM",
+    "stfu - Jan 3rd, 2019 10:39:48 AM",
   ];
 
   const getMessages = (messageArray) => messageArray[Math.floor(Math.random() * messageArray.length)];
