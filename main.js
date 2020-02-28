@@ -7,13 +7,13 @@
     "Did you bring a tent?",
     "You gonna take down the cot?",
     "Aren't you going to put away the sleeping bag?",
-    "Slack === slacking",
   ];
 
   const focusMessages = [
     "Salad is not a soup, please focus on work.",
     "Please focus on actually working and not slacking.",
-    "slack <img src='/images/snowflake.png'>"
+    "slack <img src='/images/snowflake.png'>",
+    "Slack === slacking",
   ];
 
   const getMessages = (messageArray) => messageArray[Math.floor(Math.random() * messageArray.length)];
