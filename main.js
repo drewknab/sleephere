@@ -29,7 +29,7 @@
   }
   else {
     $main.innerHTML = /*html*/`
-      <p><img src='/images/lyindrei.png'>${getMessages(focusMessages)}</p>
+      <p><img src='/images/casterdrei.jpg'>${getMessages(focusMessages)}</p>
     `;
   }
 })();
