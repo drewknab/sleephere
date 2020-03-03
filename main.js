@@ -3,11 +3,16 @@
   const theDate = new Date();
 
   const goHomeMessages = [
-    "What are you sleeping here?",
-    "Did you bring a tent?",
-    "You gonna take down the cot?",
-    "Aren't you going to put away the sleeping bag?",
-    "Working after 5 PM? Fake news.",
+    "<img src='/images/casterdrei.jpg'>What are you sleeping here?",
+    "<img src='/images/casterdrei.jpg'>Did you bring a tent?",
+    "<img src='/images/casterdrei.jpg'>You gonna take down the cot?",
+    "<img src='/images/casterdrei.jpg'>Aren't you going to put away the sleeping bag?",
+    "<img src='/images/casterdrei.jpg'>Working after 5 PM? Fake news.",
+    "<img src='/images/joef_face.png'>What are you sleeping here?",
+    "<img src='/images/joef_face.png'>Did you bring a tent?",
+    "<img src='/images/joef_face.png'>Nice camping setup you got there.",
+    "<img src='/images/joef_face.png'>You got a sleeping bag under your desk?",
+    "<img src='/images/joef_face.png'>WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
   ];
 
   const focusMessages = [
@@ -20,6 +25,7 @@
   ];
 
   const getMessages = (messageArray) => messageArray[Math.floor(Math.random() * messageArray.length)];
+
   if (theDate.getDay() === 0 || theDate.getDay() === 6) {
     $main.classList.add("warning");
     $main.innerHTML = /*html*/`
@@ -31,7 +37,7 @@
   if (theDate.getHours() >= 17) {
     $main.classList.add("warning");
     $main.innerHTML = /*html*/`
-      <p><img src='/images/casterdrei.jpg'>${getMessages(goHomeMessages)}</p>
+      <p>${getMessages(goHomeMessages)}</p>
     `;
     return;
   }
