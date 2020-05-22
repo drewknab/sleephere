@@ -1,6 +1,9 @@
+import {holidays} from './holidays.js';
+
 (() => {
-  let $main = document.querySelector("main");
+  const $main = document.querySelector("main");
   const theDate = new Date();
+  const holiday = holidays.filter(x => x.month === (theDate.getMonth() + 1) && x.day === theDate.getDate());
 
   const goHomeMessages = [
     "<img src='/images/casterdrei.jpg'>What are you sleeping here?",
@@ -26,24 +29,31 @@
   ];
 
   const getMessages = (messageArray) => messageArray[Math.floor(Math.random() * messageArray.length)];
+  const checkHoliday = (type, hour) => (type === "h" && hour  >= 12) || type === "f"
+  const buildMessage = (waysh, message) => {
+    if (waysh) $main.classList.add("warning");
+
+    $main.innerHTML = /*html*/`
+      <p>${message}</p>
+    `;
+  };
+
+  if (holiday.length > 0) {
+    if (checkHoliday(holiday[0].type, theDate.getHours())) {
+      buildMessage(true, `<img src='/images/casterdrei.jpg'>get off your puters people, get some sun</p><p>it's ${holiday[0].title}`)
+      return;
+    }
+  }
 
   if (theDate.getDay() === 0 || theDate.getDay() === 6) {
-    $main.classList.add("warning");
-    $main.innerHTML = /*html*/`
-      <p><img src='/images/casterdrei.jpg'>It's the weekend, mute Slack.</p>
-    `;
+    buildMessage(true, `<img src='/images/casterdrei.jpg'>It's the weekend, mute Slack.`)
     return;
   }
 
   if (theDate.getHours() >= 17) {
-    $main.classList.add("warning");
-    $main.innerHTML = /*html*/`
-      <p>${getMessages(goHomeMessages)}</p>
-    `;
+    buildMessage(true, getMessages(goHomeMessages));
     return;
   }
 
-  $main.innerHTML = /*html*/`
-    <p><img src='/images/lyindrei.png'>${getMessages(focusMessages)}</p>
-  `;
+  buildMessage(false,`<img src='/images/lyindrei.png'>${getMessages(focusMessages)}`);
 })();
