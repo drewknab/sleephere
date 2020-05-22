@@ -17,7 +17,7 @@ import {holidays} from './holidays.js';
     "<img src='/images/joef_face.png'>You got a sleeping bag under your desk?",
     "<img src='/images/joef_face.png'>WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
     "<img src='/images/waysh_biatch.png'>That B, WAYSH",
-    "<img src='/images/casterdrei.jpg'>get off your puters people, get some sun",
+    "<img src='/images/teledrei.png'>get off your puters people, get some sun",
   ];
 
   const focusMessages = [
@@ -41,7 +41,7 @@ import {holidays} from './holidays.js';
 
   if (holiday.length > 0) {
     if (checkHoliday(holiday[0].type, theDate.getHours())) {
-      buildMessage(true, `<img src='/images/casterdrei.jpg'>get off your puters people, get some sun</p><p>it's ${holiday[0].title}`)
+      buildMessage(true, `<img src='/images/teledrei.png'>get off your puters people, get some sun</p><p>it's ${holiday[0].title}`)
       return;
     }
   }
