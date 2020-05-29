@@ -21,12 +21,13 @@ import {holidays} from './holidays.js';
   ];
 
   const focusMessages = [
-    "Salad is not a soup, please focus on work.",
-    "Please focus on actually working and not slacking.",
-    "slack <img src='/images/snowflake.png'>",
-    "Slack === slacking",
-    "too much dank, not enough codez",
-    "stfu - Jan 3rd, 2019 10:39:48 AM",
+    "<img src='/images/lyindrei.png'>Salad is not a soup, please focus on work.",
+    "<img src='/images/lyindrei.png'>Please focus on actually working and not slacking.",
+    "<img src='/images/teledrei.png'>slack <img src='/images/snowflake.png'>",
+    "<img src='/images/lyindrei.png'>Slack === slacking",
+    "<img src='/images/teledrei.png'>too much dank, not enough codez",
+    "<img src='/images/lyindrei.png'>stfu - Jan 3rd, 2019 10:39:48 AM",
+    "<img src='/images/joef_face.png'>You must be buffalo sports, because you’re constantly disappointing me",
   ];
 
   const getMessages = (messageArray) => messageArray[Math.floor(Math.random() * messageArray.length)];
@@ -56,5 +57,5 @@ import {holidays} from './holidays.js';
     return;
   }
 
-  buildMessage(false,`<img src='/images/lyindrei.png'>${getMessages(focusMessages)}`);
+  buildMessage(false,`${getMessages(focusMessages)}`);
 })();
