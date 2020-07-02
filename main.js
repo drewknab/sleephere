@@ -28,6 +28,7 @@ import {holidays} from './holidays.js';
     "<img src='/images/teledrei.png'>too much dank, not enough codez",
     "<img src='/images/lyindrei.png'>stfu - Jan 3rd, 2019 10:39:48 AM",
     "<img src='/images/joef_face.png'>You must be buffalo sports, because you’re constantly disappointing me",
+    "<img src='/images/joef_official.PNG'>stop me if i’m git-splain’in… but"
   ];
 
   const getMessages = (messageArray) => messageArray[Math.floor(Math.random() * messageArray.length)];
