@@ -18,6 +18,7 @@ import {holidays} from './holidays.js';
     "<img src='/images/joef_face.png'>WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
     "<img src='/images/waysh_biatch.png'>That B, WAYSH",
     "<img src='/images/teledrei.png'>get off your puters people, get some sun",
+    "<img src='/images/teledrei.png'>ha, so cool",
   ];
 
   const focusMessages = [
