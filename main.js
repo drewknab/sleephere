@@ -31,7 +31,13 @@ import {holidays} from './holidays.js';
     "<img src='/images/joef_official.PNG'>stop me if i’m git-splain’in… but",
     "<img src='/images/teledrei.png'>ha, so cool",
     "<img src='/images/teledrei.png'>quick question though, what were doing deep in a twitter thread at 3:36 PM?",
+    "<img src='/images/vinny.png'>tbh I just said buzzwords in every sentence of my interview and I was gold"
   ];
+  
+  const weekendMessages = [
+    "<img src='/images/vinny.png'>got tired of not having a pool this weekend so I built one",
+    "<img src='/images/casterdrei.jpg'>It's the weekend, mute Slack."
+  ]
 
   const getMessages = (messageArray) => messageArray[Math.floor(Math.random() * messageArray.length)];
   const checkHoliday = (type, hour) => (type === "h" && hour  >= 12) || type === "f"
@@ -51,7 +57,7 @@ import {holidays} from './holidays.js';
   }
 
   if (theDate.getDay() === 0 || theDate.getDay() === 6) {
-    buildMessage(true, `<img src='/images/casterdrei.jpg'>It's the weekend, mute Slack.`)
+    buildMessage(true, getMessages(weekendMessages))
     return;
   }
 
