@@ -16,7 +16,6 @@ import {holidays} from './holidays.js';
     "<img src='/images/joef_face.png'>Nice camping setup you got there.",
     "<img src='/images/joef_face.png'>You got a sleeping bag under your desk?",
     "<img src='/images/joef_face.png'>WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
-    "<img src='/images/waysh_biatch.png'>That B, WAYSH",
     "<img src='/images/teledrei.png'>get off your puters people, get some sun",
   ];
 
